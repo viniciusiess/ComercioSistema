@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A551ED0A-C466-485B-8D1F-74809BD304B2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ComercioSistema</RootNamespace>
+    <AssemblyName>ComercioSistema</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.1.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controladores\ControladorCadastro.cs" />
+    <Compile Include="Controladores\ControladorCadastroClassificacaoProduto.cs" />
+    <Compile Include="Controladores\ControladorCadastroFornecedor.cs" />
+    <Compile Include="Controladores\ControladorCadastroCliente.cs" />
+    <Compile Include="Controladores\ControladorCadastroProduto.cs" />
+    <Compile Include="Entidades\Fornecedor.cs" />
+    <Compile Include="Entidades\Cliente.cs" />
+    <Compile Include="Entidades\Entidade.cs" />
+    <Compile Include="Entidades\ClassificacaoProduto.cs" />
+    <Compile Include="Entidades\Produto.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\TelaClassificacaoProduto\AtualizarClassificacaoProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\TelaClassificacaoProduto\AtualizarClassificacaoProduto.Designer.cs">
+      <DependentUpon>AtualizarClassificacaoProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\TelaClassificacaoProduto\FormCadastroClassificacaoProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\TelaClassificacaoProduto\FormCadastroClassificacaoProduto.Designer.cs">
+      <DependentUpon>FormCadastroClassificacaoProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\TelaClassificacaoProduto\ListaClassificacaoProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\TelaClassificacaoProduto\ListaClassificacaoProduto.Designer.cs">
+      <DependentUpon>ListaClassificacaoProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\TelaCliente\AtualizarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\TelaCliente\AtualizarCliente.Designer.cs">
+      <DependentUpon>AtualizarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\TelaCliente\FormCadastroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\TelaCliente\FormCadastroCliente.Designer.cs">
+      <DependentUpon>FormCadastroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\TelaCliente\ListaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\TelaCliente\ListaCliente.Designer.cs">
+      <DependentUpon>ListaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\TelaFornecedor\AtualizarFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\TelaFornecedor\AtualizarFornecedor.Designer.cs">
+      <DependentUpon>AtualizarFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\TelaFornecedor\FormCadastroFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\TelaFornecedor\FormCadastroFornecedor.Designer.cs">
+      <DependentUpon>FormCadastroFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\TelaFornecedor\ListaFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\TelaFornecedor\ListaFornecedor.Designer.cs">
+      <DependentUpon>ListaFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\TelaProduto\AtualizarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\TelaProduto\AtualizarProduto.Designer.cs">
+      <DependentUpon>AtualizarProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\TelaProduto\FormCadastroProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\TelaProduto\FormCadastroProduto.Designer.cs">
+      <DependentUpon>FormCadastroProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\TelaProduto\ListaProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\TelaProduto\ListaProduto.Designer.cs">
+      <DependentUpon>ListaProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistencia\BancoDados.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\TelaClassificacaoProduto\AtualizarClassificacaoProduto.resx">
+      <DependentUpon>AtualizarClassificacaoProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\TelaClassificacaoProduto\FormCadastroClassificacaoProduto.resx">
+      <DependentUpon>FormCadastroClassificacaoProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\TelaClassificacaoProduto\ListaClassificacaoProduto.resx">
+      <DependentUpon>ListaClassificacaoProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\TelaCliente\AtualizarCliente.resx">
+      <DependentUpon>AtualizarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\TelaCliente\FormCadastroCliente.resx">
+      <DependentUpon>FormCadastroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\TelaCliente\ListaCliente.resx">
+      <DependentUpon>ListaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\TelaFornecedor\AtualizarFornecedor.resx">
+      <DependentUpon>AtualizarFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\TelaFornecedor\FormCadastroFornecedor.resx">
+      <DependentUpon>FormCadastroFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\TelaFornecedor\ListaFornecedor.resx">
+      <DependentUpon>ListaFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\TelaProduto\AtualizarProduto.resx">
+      <DependentUpon>AtualizarProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\TelaProduto\FormCadastroProduto.resx">
+      <DependentUpon>FormCadastroProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\TelaProduto\ListaProduto.resx">
+      <DependentUpon>ListaProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
