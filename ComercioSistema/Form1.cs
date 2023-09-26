@@ -38,28 +38,33 @@ namespace ComercioSistema
             BancoDados.obterInstancia().desconectar();
         }
 
-        private void btnCliente_Click(object sender, EventArgs e)
+        private void btnCliente_Click(object sender, EventArgs e){
+            ListaCliente listaCliente = new ListaCliente();
+            listaCliente.ShowDialog();
+        }
+        private void btnFornecedor_Click(object sender, EventArgs e){
+            ListaFornecedor listaFornecedor = new ListaFornecedor();
+            listaFornecedor.ShowDialog();
+        }
+        private void btnProduto_Click(object sender, EventArgs e){
+            ListaProduto listaProduto = new ListaProduto();
+            listaProduto.ShowDialog();
+        }
+
+        private void btnClassificacao_Click(object sender, EventArgs e){
+            ListaClassificacaoProduto listaClassificacaoProduto = new ListaClassificacaoProduto();
+            listaClassificacaoProduto.ShowDialog();
+        }
+
+        private void Form1_Load_1(object sender, EventArgs e)
         {
             ListaCliente listaCliente = new ListaCliente();
             listaCliente.ShowDialog();
         }
 
-        private void btnFornecedor_Click(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
-            ListaFornecedor listaFornecedor = new ListaFornecedor();
-            listaFornecedor.ShowDialog();
-        }
 
-        private void btnProduto_Click(object sender, EventArgs e)
-        {
-            ListaProduto listaProduto = new ListaProduto();
-            listaProduto.ShowDialog();
-        }
-
-        private void btnClassificacao_Click(object sender, EventArgs e)
-        {
-            ListaClassificacaoProduto listaClassificacaoProduto = new ListaClassificacaoProduto();
-            listaClassificacaoProduto.ShowDialog();
         }
     }
 }
