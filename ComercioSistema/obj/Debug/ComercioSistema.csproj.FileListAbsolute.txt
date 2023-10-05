@@ -30,3 +30,5 @@ C:\Users\siess\Documents\C#\ComercioSistema\ComercioSistema\obj\Debug\ComercioSi
 C:\Users\siess\Documents\C#\ComercioSistema\ComercioSistema\obj\Debug\ComercioSistema.Interface.TelaProduto.AtualizarProduto.resources
 C:\Users\siess\Documents\C#\ComercioSistema\ComercioSistema\obj\Debug\ComercioSistema.Interface.TelaProduto.ListaProduto.resources
 C:\Users\siess\Documents\C#\ComercioSistema\ComercioSistema\obj\Debug\ComercioSistema.Interface.TelaProduto.FormCadastroProduto.resources
+C:\Users\siess\Documents\C#\ComercioSistema\ComercioSistema\obj\Debug\ComercioSistema.Interface.TelaVenda.TelaVenda.resources
+C:\Users\siess\Documents\C#\ComercioSistema\ComercioSistema\obj\Debug\ComercioSistema.Interface.TelaVenda.TelaVendaFinal.resources

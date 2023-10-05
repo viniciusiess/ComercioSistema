@@ -13,6 +13,7 @@ using ComercioSistema.Interface;
 using ComercioSistema.Interface.TelaClassificacaoProduto;
 using ComercioSistema.Interface.TelaFornecedor;
 using ComercioSistema.Interface.TelaProduto;
+using ComercioSistema.Interface.TelaVenda;
 using ComercioSistema.Persistencia;
 
 namespace ComercioSistema
@@ -65,6 +66,12 @@ namespace ComercioSistema
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TelaVenda telaVenda = new TelaVenda();
+            telaVenda.ShowDialog();
         }
     }
 }

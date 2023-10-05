@@ -96,5 +96,32 @@ namespace AcessoBancoDados.Controladores
                 return dataTable;
             }
         }
+
+        public string ObterNomeClientePorId(int clienteId)
+        {
+            string comandoSQL = "SELECT nome FROM cliente WHERE id = @id";
+
+            MySqlConnection conexao = BancoDados.obterInstancia().obterConexao();
+
+            using (MySqlCommand comando = new MySqlCommand(comandoSQL, conexao))
+            {
+                comando.Parameters.AddWithValue("@id", clienteId);
+
+                try
+                {
+                    conexao.Open();
+                    var result = comando.ExecuteScalar();
+
+                    // Verifica se o resultado não é nulo e converte para string
+                    return result != null ? result.ToString() : string.Empty;
+                }
+                catch (Exception ex)
+                {
+                    // Lidar com exceções conforme necessário
+                    Console.WriteLine("Erro ao obter o nome do cliente por ID: " + ex.Message);
+                    return string.Empty;
+                }
+            }
+        }
     }
 }

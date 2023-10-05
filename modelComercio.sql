@@ -14,7 +14,7 @@ create table Cliente(
     cidade varchar(50) not null,
     uf char(2) not null,
     cep varchar(10) not null,
-    INDEX (cpf_cnpj)
+    INDEX (nome)
 );
 
 create table Fornecedor(
@@ -30,7 +30,7 @@ create table Fornecedor(
     cidade varchar(50) not null,
     uf char(2) not null,
     cep varchar(10) not null,
-    INDEX (cpf_cnpj)
+    INDEX (nome)
 );
 
 create table ClassificacaoProduto(
@@ -48,5 +48,21 @@ CREATE TABLE Produto(
     fornecedor_id int unsigned,
     classificacao_id int unsigned,
     foreign key (fornecedor_id) references Fornecedor(id),
-    foreign key (classificacao_id) references ClassificacaoProduto(id)
+    foreign key (classificacao_id) references ClassificacaoProduto(id),
+	INDEX(nome)
+);
+
+CREATE TABLE Venda (
+	id int unsigned not null auto_increment primary key,
+	quantidade int,
+    valor_unitario decimal(10,2),
+    data_hora_venda datetime,
+    total decimal(10,2),
+    tipo_pagamento varchar(50),
+    parcelado varchar(3),
+    parcelamento_vezes int,
+    cliente_id int unsigned,
+	produto_id int unsigned,
+    foreign key (cliente_id) references Cliente(id),
+    foreign key (produto_id) references Produto(id)
 );

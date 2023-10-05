@@ -58,11 +58,13 @@
     <Compile Include="Controladores\ControladorCadastroFornecedor.cs" />
     <Compile Include="Controladores\ControladorCadastroCliente.cs" />
     <Compile Include="Controladores\ControladorCadastroProduto.cs" />
+    <Compile Include="Controladores\ControladorVenda.cs" />
     <Compile Include="Entidades\Fornecedor.cs" />
     <Compile Include="Entidades\Cliente.cs" />
     <Compile Include="Entidades\Entidade.cs" />
     <Compile Include="Entidades\ClassificacaoProduto.cs" />
     <Compile Include="Entidades\Produto.cs" />
+    <Compile Include="Entidades\Venda.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +143,18 @@
     <Compile Include="Interface\TelaProduto\ListaProduto.Designer.cs">
       <DependentUpon>ListaProduto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface\TelaVenda\TelaVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\TelaVenda\TelaVenda.Designer.cs">
+      <DependentUpon>TelaVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\TelaVenda\TelaVendaFinal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\TelaVenda\TelaVendaFinal.Designer.cs">
+      <DependentUpon>TelaVendaFinal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Persistencia\BancoDados.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -182,6 +196,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\TelaProduto\ListaProduto.resx">
       <DependentUpon>ListaProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\TelaVenda\TelaVenda.resx">
+      <DependentUpon>TelaVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\TelaVenda\TelaVendaFinal.resx">
+      <DependentUpon>TelaVendaFinal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
